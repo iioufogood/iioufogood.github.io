@@ -1,6 +1,6 @@
 var baseUrl = "./data/data";
 var markNum = 1;
-var maxNum = 3;
+var maxNum = 2;
 var stackCloudList = [];
 var vueApp = null;
 //初始化
@@ -50,7 +50,7 @@ function init () {
 
 //ajax  请求json数据  json
 
-queryJson();
+// queryJson();
 
 function queryJson () {
     var url = baseUrl + markNum + ".json"
@@ -116,7 +116,7 @@ function addDataNew (data) {
 
 //script标签请求数据   js
 
-// getData();
+getData();
 
 function getData () {
     getScript(window, document, "script", baseUrl + markNum + ".js", function (target) {
