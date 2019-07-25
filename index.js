@@ -79,7 +79,7 @@ function addData (data) {
             })
             if (!hasBusiness) {
                 //stackCloudList = [...stackCloudList, item];
-                stackCloudList = stackCloudList.push(item);
+                stackCloudList.push(item);
             }
         })
     }
