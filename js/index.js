@@ -1,4 +1,4 @@
-var baseUrl = "./data";
+var baseUrl = "./data/data";
 var markNum = 1;
 var maxNum = 3;
 var stackCloudList = [];
