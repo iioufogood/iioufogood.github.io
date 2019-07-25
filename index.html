@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-	<meta charset="UTF-8">
-	<title>iioufogood</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cloud</title>
+    <link rel="stylesheet" href="./index.css?v=fae9d2e" />
 </head>
-<body>
-	<h1>这是我的主页test166666611</h1>
+
+<body class="body" style="overflow: hidden;">
+    <div id="levelTwoContent" class="fadeIn">
+        <div class="content-section" v-cloak>
+            <div class="level-two-left">
+                <div class="level-two-left-content">
+                    <div class="level-two-title">
+                        <p>{{levelTwoTile}}</p>
+                    </div>
+                    <div class="left-list" v-for="item in stackCloudList" :class="{active: item.businessName.trim() === activeBusinessName}">
+                        <div class="list-title">
+                            <span class="point-mark"></span>
+                            <p>{{item.businessName.trim()}}</p>
+                        </div>
+                        <ul class="list-content">
+                            <li v-for="child in item.children" :class="{active: child.name.trim() === activeChildName && item.businessName.trim() === activeBusinessName}">
+                                <span @click="businessShowFn(item.businessName, child.name)">{{child.name.trim()}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="level-two-right">
+                <div class="level-two-right-content" v-if="targetBusiness.detailOption">
+                    <div class="section" v-for="item in targetBusiness.detailOption">
+                        <div class="section-title">
+                            <span class="section-point"></span>
+                            <span class="title-content">{{item.name}}</span>
+                        </div>
+                        <p>{{item.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./jquery.min.js?v=13c0a5055c?v=13c0a50"></script>
+    <script type="text/javascript" src="./data.js?v=4fd217e"></script>
+    <script type="text/javascript" src="./vue.min.js?v=4fd217e"></script>
+    <script type="text/javascript" src="./index.js?v=4fd217e"></script>
 </body>
+
 </html>
