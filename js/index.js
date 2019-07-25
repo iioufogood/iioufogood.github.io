@@ -3,8 +3,8 @@ var markNum = 1;
 var maxNum = 2;
 var stackCloudList = [];
 var vueApp = null;
-//初始化
-init();
+//初始化 queryJson方法是启用
+// init();
 function init () {
     stackCloudList = window.windowData ? window.windowData : [];
     vueApp = new Vue({
