@@ -174,7 +174,8 @@ pre {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 10em;    
+    width: 10em; 
+    margin-right: 1.2rem;
 
 }
 
