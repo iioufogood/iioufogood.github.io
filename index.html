@@ -35,7 +35,7 @@
                     <div class="section" v-for="item in targetBusiness.detailOption">
                         <div class="section-title">
                             <span class="section-point"></span>
-                            <span class="title-content">{{item.name}}</span>
+                            <span class="title-content" :title="item.name">{{item.name}}</span>
                         </div>
                         <p v-html="item.description.trim()"></p>
                     </div>
