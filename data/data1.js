@@ -25,7 +25,7 @@ $(function(){
                     "detailOption": [
                         {
                             "name": "使用方法",
-                            "description": "<div><span style=\"font-size: 14px;\">//ctrl + c&nbsp; &nbsp;ctrl + v</span></div><div><span style=\"font-size: 14px;\">$(\"#fb_content\").pasteUploadImage(\"后台上传图片接口", function ($this, file, imgData) {</span></div><div><span style=\"white-space: pre; font-size: 14px;\">		</span></div><div>})</div>"
+                            "description": "<div><span style=\"font-size: 14px;\">//ctrl + c&nbsp; &nbsp;ctrl + v</span></div><div><span style=\"font-size: 14px;\">$(\"#fb_content\").pasteUploadImage(\"后台上传图片接口\", function ($this, file, imgData) {</span></div><div><span style=\"white-space: pre; font-size: 14px;\">		</span></div><div>})</div>"
                         },
                         {
                             "name": "注意事项",
