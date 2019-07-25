@@ -1,7 +1,7 @@
 var baseUrl = "./data";
 var markNum = 1;
 
-queryJson();
+//queryJson();
 var stackCloudList = [];
 var vueApp = new Vue({
   el: '#levelTwoContent',
