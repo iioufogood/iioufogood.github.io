@@ -11,7 +11,7 @@ function init () {
       el: '#levelTwoContent',
       data: function () {
         return {
-            levelTwoTile: "学习资料",
+            levelTwoTile: "学无止境",
             stackCloudList: stackCloudList,
             targetBusiness: {},
             activeBusinessName: "",
