@@ -72,12 +72,12 @@ function addData (data) {
             var hasBusiness = false;
             stackCloudList.forEach(function (stackItem) {
                 if (stackItem.businessName === item.businessName) {
-                    stackItem.children = [...stackItem.children, ...item.children];
+                    //stackItem.children = [...stackItem.children, ...item.children];
                     hasBusiness = true;
                 }
             })
             if (!hasBusiness) {
-                stackCloudList = [...stackCloudList, item];
+                //stackCloudList = [...stackCloudList, item];
             }
         })
     }
