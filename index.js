@@ -73,11 +73,13 @@ function addData (data) {
             stackCloudList.forEach(function (stackItem) {
                 if (stackItem.businessName === item.businessName) {
                     //stackItem.children = [...stackItem.children, ...item.children];
+                    stackItem.children = stackItem.children.concat(item.children);
                     hasBusiness = true;
                 }
             })
             if (!hasBusiness) {
                 //stackCloudList = [...stackCloudList, item];
+                stackCloudList = stackCloudList.push(item);
             }
         })
     }
