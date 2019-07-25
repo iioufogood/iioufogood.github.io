@@ -3,6 +3,7 @@ var markNum = 1;
 var maxNum = 3;
 var stackCloudList = [];
 var vueApp = null;
+$("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
 //初始化
 function init () {
     stackCloudList = windowData;
@@ -47,7 +48,7 @@ function init () {
 }
 //script标签请求数据   js
 
-getData();
+// getData();
 
 function getData () {
     $("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
