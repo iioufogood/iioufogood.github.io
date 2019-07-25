@@ -13,6 +13,9 @@ li {
     list-style: none;
 }
 
+pre {
+    white-space: pre-wrap;
+}
 .fadeIn {
   -webkit-animation: fadeIn 5s ease-in-out;
   -moz-animation: fadeIn 5s ease-in-out;
@@ -220,7 +223,7 @@ li {
     color: #333;
     font-size: 0.9rem;
     background: #fff;
-    overflow-y: auto;
+    overflow: auto;
 }
 
 .level-two-right-content .section {
