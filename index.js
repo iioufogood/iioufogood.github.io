@@ -59,7 +59,8 @@ function queryJson () {
             Vue.set(vueApp, "stackCloudList", stackCloudList);
             Vue.set(vueApp, "targetBusiness", stackCloudList[0].children[0]);
             Vue.set(vueApp, "activeBusinessName", stackCloudList[0].businessName);
-            Vue.set(vueApp, "activeChildName", stackCloudList[0].children[0].name);          
+            Vue.set(vueApp, "activeChildName", stackCloudList[0].children[0].name); 
+          Vue.set(vueApp, "levelTwoTile", "请求失败!  " + "status:" + e.status + "请求失败url：" + url);
         }
     })
 }
