@@ -9,6 +9,10 @@ html, body, p {
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
 .fadeIn {
   -webkit-animation: fadeIn 5s ease-in-out;
   -moz-animation: fadeIn 5s ease-in-out;
@@ -131,7 +135,7 @@ html, body, p {
 .level-two-left-content {
     width: 100%;
     height: 100%;
-    padding: 30px 30px 30px 60px;
+    padding-left: 10px;
     overflow-y: auto;
     background: #121C38;
 }
@@ -164,6 +168,10 @@ html, body, p {
     float: left;
     width: 25%;
     margin-bottom: 1.0rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 10em;    
 
 }
 
