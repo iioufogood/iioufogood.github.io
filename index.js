@@ -64,7 +64,7 @@ function getData () {
 function getScript(win, doc, tag, src, always) {
     var script = doc.createElement(tag),
         h = doc.getElementsByTagName(tag)[doc.getElementsByTagName(tag).length - 1];
-    script.async = 0;
+    script.async = 1;
     if (tag === "script") {
         script.src = src;
     } else if (tag === "link") {
