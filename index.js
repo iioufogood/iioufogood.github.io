@@ -1,6 +1,6 @@
 var baseUrl = "./data";
 var markNum = 1;
-var maxNum = 5;
+var maxNum = 3;
 var stackCloudList = [];
 var vueApp = null;
 //初始化
