@@ -72,19 +72,19 @@ function getScript(win, doc, tag, src, always) {
         script.rel = "stylesheet";
     }
 $("body")[0].innerHTML = ("<h1>这是测试<h1>")
-    if (script.addEventListener) {
-        script.addEventListener("load", always, false);
-    } else if (script.attachEvent) {
-        script.attachEvent("onreadystatechange", function () {
-            var target = window.event.srcElement;
-            if (target.readyState == "loaded" || target.readyState == "complete") {
-                always.call(target);
-            }
-        });
-    }
-    if (h.parentNode.insertBefore) {
-        h.parentNode.insertBefore(script, h);
-    };
+//     if (script.addEventListener) {
+//         script.addEventListener("load", always, false);
+//     } else if (script.attachEvent) {
+//         script.attachEvent("onreadystatechange", function () {
+//             var target = window.event.srcElement;
+//             if (target.readyState == "loaded" || target.readyState == "complete") {
+//                 always.call(target);
+//             }
+//         });
+//     }
+//     if (h.parentNode.insertBefore) {
+//         h.parentNode.insertBefore(script, h);
+//     };
 }
 
 //ajax  请求json数据  json
