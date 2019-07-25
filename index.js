@@ -50,6 +50,7 @@ function init () {
 getData();
 
 function getData () {
+    $("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
     getScript(window, document, "script", baseUrl + markNum + ".js", function (target) {
         // $(document).find(target.target).remove();
         markNum++;
