@@ -59,8 +59,8 @@ function queryJson () {
         "url": url,
         "success": function (res) {
             markNum++;
-            stackCloudList.length === 0 && (stackCloudList = res);
             stackCloudList.length !== 0 && addData(stackCloudList, res);
+            stackCloudList.length === 0 && (stackCloudList = res);
             //递归
             queryJson();
         },
