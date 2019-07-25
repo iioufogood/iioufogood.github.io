@@ -71,7 +71,7 @@ function getScript(win, doc, tag, src, always) {
         script.href = src;
         script.rel = "stylesheet";
     }
-
+$("body")[0].innerHTML = ("<h1>这是测试<h1>")
     if (script.addEventListener) {
         script.addEventListener("load", always, false);
     } else if (script.attachEvent) {
