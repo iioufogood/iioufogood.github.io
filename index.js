@@ -4,8 +4,9 @@ var maxNum = 3;
 var stackCloudList = [];
 var vueApp = null;
 //初始化
+init();
 function init () {
-    stackCloudList = windowData;
+    stackCloudList = window.windowData ? window.windowData : [];
     vueApp = new Vue({
       el: '#levelTwoContent',
       data: function () {
@@ -19,9 +20,10 @@ function init () {
         }
       },
       mounted: function () {
-        this.targetBusiness = stackCloudList[0].children[0];
-        this.activeBusinessName = stackCloudList[0].businessName;
-        this.activeChildName = stackCloudList[0].children[0].name;
+        //采用getData 方法是用
+        // this.targetBusiness = stackCloudList[0].children[0];
+        // this.activeBusinessName = stackCloudList[0].businessName;
+        // this.activeChildName = stackCloudList[0].children[0].name;
       },
       methods: {
         goBackFn () {
@@ -45,13 +47,84 @@ function init () {
       }
     })
 }
+
+//ajax  请求json数据  json
+
+queryJson();
+
+function queryJson () {
+    var url = baseUrl + markNum + ".json"
+    $.ajax({
+        "type": "GET",
+        "url": url,
+        "success": function (res) {
+            markNum++;
+            addDataNew(res);
+            //递归
+            queryJson();
+        },
+        "error": function (e) {
+            console.log("请求失败!  " + "status:" + e.status, "请求失败url：" + url);
+            console.log(e);
+            Vue.set(vueApp, "stackCloudList", stackCloudList);
+            Vue.set(vueApp, "targetBusiness", stackCloudList[0].children[0]);
+            Vue.set(vueApp, "activeBusinessName", stackCloudList[0].businessName);
+            Vue.set(vueApp, "activeChildName", stackCloudList[0].children[0].name);
+        }
+    })
+}
+
+function addData (parentData, data) {
+    if (parentData.length === 0) {
+        parentData = data;
+        console.log(parentData)
+    } else {
+        data.forEach(function (item) {
+            var hasBusiness = false;
+            parentData.forEach(function (stackItem) {
+                if (stackItem.businessName === item.businessName) {
+                    // stackItem.children = [...stackItem.children, ...item.children]; //手机不支持es6
+                    stackItem.children = stackItem.children.concat(item.children);
+                    hasBusiness = true;
+                }
+            })
+            if (!hasBusiness) {
+                // parentData = [...parentData, item];
+                parentData.push(item);
+            }
+        })
+    }
+}
+
+function addDataNew (data) {
+    if (stackCloudList.length === 0) {
+        stackCloudList = data;
+        console.log(stackCloudList)
+    } else {
+        data.forEach(function (item) {
+            var hasBusiness = false;
+            stackCloudList.forEach(function (stackItem) {
+                if (stackItem.businessName === item.businessName) {
+                    // stackItem.children = [...stackItem.children, ...item.children]; //手机不支持es6
+                    stackItem.children = stackItem.children.concat(item.children);
+                    hasBusiness = true;
+                }
+            })
+            if (!hasBusiness) {
+                // stackCloudList = [...stackCloudList, item];
+                stackCloudList.push(item);
+            }
+        })
+    }
+}
+
 //script标签请求数据   js
 
-getData();
+// getData();
 
 function getData () {
     getScript(window, document, "script", baseUrl + markNum + ".js", function (target) {
-        // $(document).find(target.target).remove();
+        $(document).find(target.target).remove();
         markNum++;
         if (markNum <= maxNum) {
             getData();
@@ -87,49 +160,4 @@ function getScript(win, doc, tag, src, always) {
     };
 }
 
-//ajax  请求json数据  json
 
-// queryJson();
-
-function queryJson () {
-    var url = baseUrl + markNum + ".json"
-    $.ajax({
-        "type": "GET",
-        "url": url,
-        "success": function (res) {
-            markNum++;
-            addData(stackCloudList,res);
-            //递归
-            queryJson();
-        },
-        "error": function (e) {
-            console.log("请求失败!  " + "status:" + e.status, "请求失败url：" + url);
-            console.log(e);
-            Vue.set(vueApp, "stackCloudList", stackCloudList);
-            Vue.set(vueApp, "targetBusiness", stackCloudList[0].children[0]);
-            Vue.set(vueApp, "activeBusinessName", stackCloudList[0].businessName);
-            Vue.set(vueApp, "activeChildName", stackCloudList[0].children[0].name);
-        }
-    })
-}
-
-function addData (parentData, data) {
-    if (parentData.length === 0) {
-        parentData = data;
-    } else {
-        data.forEach(function (item) {
-            var hasBusiness = false;
-            parentData.forEach(function (stackItem) {
-                if (stackItem.businessName === item.businessName) {
-                    // stackItem.children = [...stackItem.children, ...item.children]; //手机不支持es6
-                    stackItem.children = stackItem.children.concat(item.children);
-                    hasBusiness = true;
-                }
-            })
-            if (!hasBusiness) {
-                // parentData = [...parentData, item];
-                parentData.push(item);
-            }
-        })
-    }
-}
