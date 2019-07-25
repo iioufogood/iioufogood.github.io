@@ -21,9 +21,9 @@ function init () {
       },
       mounted: function () {
         //采用getData 方法是用
-        // this.targetBusiness = stackCloudList[0].children[0];
-        // this.activeBusinessName = stackCloudList[0].businessName;
-        // this.activeChildName = stackCloudList[0].children[0].name;
+        this.targetBusiness = stackCloudList[0].children[0];
+        this.activeBusinessName = stackCloudList[0].businessName;
+        this.activeChildName = stackCloudList[0].children[0].name;
       },
       methods: {
         goBackFn () {
