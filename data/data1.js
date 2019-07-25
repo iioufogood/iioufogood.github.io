@@ -21,18 +21,14 @@ $(function(){
                     ]
                 },
                 {
-                    "name": "多种类型云资源池",
+                    "name": "简易富文本图片上传",
                     "detailOption": [
                         {
-                            "name": "业务痛点1",
-                            "description": "大型企业区域分布广泛，会在多个地域同时开展业务，核心业务在私有云部署，同时会协同公有云资源，如何统一管理部署"
+                            "name": "使用方法",
+                            "description": "<div><span style=\"font-size: 14px;\">//ctrl + c&nbsp; &nbsp;ctrl + v</span></div><div><span style=\"font-size: 14px;\">$(\"#fb_content\").pasteUploadImage(\"/rest/portal/v4.0/website/feedback/icons\", function ($this, file, imgData) {</span></div><div><span style=\"white-space: pre; font-size: 14px;\">		</span></div><div>})</div>"
                         },
                         {
                             "name": "业务痛点2",
-                            "description": "大型企业区域分布广泛，会在多个地域同时开展业务，核心业务在私有云部署，同时会协同公有云资源，如何统一管理部署"
-                        },                    
-                        {
-                            "name": "业务痛点3",
                             "description": "大型企业区域分布广泛，会在多个地域同时开展业务，核心业务在私有云部署，同时会协同公有云资源，如何统一管理部署"
                         }
                     ]
