@@ -24,7 +24,7 @@
                         </div>
                         <ul class="list-content">
                             <li v-for="(child, index) in item.children" :class="{active: index === childIndex && item.businessName.trim() === activeBusinessName}">
-                                <span @click="businessShowFn(item.businessName, child.name, index)">{{child.name.trim()}}</span>
+                                <span @click="businessShowFn(item.businessName, child.name, index)" :title="item.name">{{child.name.trim()}}</span>
                             </li>
                         </ul>
                     </div>
@@ -35,7 +35,7 @@
                     <div class="section" v-for="item in targetBusiness.detailOption">
                         <div class="section-title">
                             <span class="section-point"></span>
-                            <span class="title-content" :title="item.name">{{item.name}}</span>
+                            <span class="title-content">{{item.name}}</span>
                         </div>
                         <p v-html="item.description.trim()"></p>
                     </div>
