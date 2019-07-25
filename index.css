@@ -216,10 +216,11 @@ li {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 3.0rem 1.4rem 1.4rem 0;
+    padding: 1.0rem 1.4rem 1.4rem 0;
     color: #333;
     font-size: 0.9rem;
     background: #fff;
+    overflow-y: auto;
 }
 
 .level-two-right-content .section {
