@@ -3,7 +3,6 @@ var markNum = 1;
 var maxNum = 3;
 var stackCloudList = [];
 var vueApp = null;
-$("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
 //初始化
 function init () {
     stackCloudList = windowData;
@@ -48,10 +47,9 @@ function init () {
 }
 //script标签请求数据   js
 
-// getData();
+getData();
 
 function getData () {
-    $("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
     getScript(window, document, "script", baseUrl + markNum + ".js", function (target) {
         // $(document).find(target.target).remove();
         markNum++;
@@ -73,20 +71,20 @@ function getScript(win, doc, tag, src, always) {
         script.href = src;
         script.rel = "stylesheet";
     }
-$("body")[0].innerHTML = ("<h1 style='color: red;'>这是测试<h1>")
-//     if (script.addEventListener) {
-//         script.addEventListener("load", always, false);
-//     } else if (script.attachEvent) {
-//         script.attachEvent("onreadystatechange", function () {
-//             var target = window.event.srcElement;
-//             if (target.readyState == "loaded" || target.readyState == "complete") {
-//                 always.call(target);
-//             }
-//         });
-//     }
-//     if (h.parentNode.insertBefore) {
-//         h.parentNode.insertBefore(script, h);
-//     };
+
+    if (script.addEventListener) {
+        script.addEventListener("load", always, false);
+    } else if (script.attachEvent) {
+        script.attachEvent("onreadystatechange", function () {
+            var target = window.event.srcElement;
+            if (target.readyState == "loaded" || target.readyState == "complete") {
+                always.call(target);
+            }
+        });
+    }
+    if (h.parentNode.insertBefore) {
+        h.parentNode.insertBefore(script, h);
+    };
 }
 
 //ajax  请求json数据  json
