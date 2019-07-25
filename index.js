@@ -59,7 +59,8 @@ function queryJson () {
         "url": url,
         "success": function (res) {
             markNum++;
-            addDataNew(res);
+            stackCloudList.length === 0 && (stackCloudList = res);
+            stackCloudList.length !== 0 && addData(stackCloudList, res);
             //递归
             queryJson();
         },
@@ -75,27 +76,22 @@ function queryJson () {
 }
 
 function addData (parentData, data) {
-    if (parentData.length === 0) {
-        parentData = data;
-        console.log(parentData)
-    } else {
-        data.forEach(function (item) {
-            var hasBusiness = false;
-            parentData.forEach(function (stackItem) {
-                if (stackItem.businessName === item.businessName) {
-                    // stackItem.children = [...stackItem.children, ...item.children]; //手机不支持es6
-                    stackItem.children = stackItem.children.concat(item.children);
-                    hasBusiness = true;
-                }
-            })
-            if (!hasBusiness) {
-                // parentData = [...parentData, item];
-                parentData.push(item);
+    data.forEach(function (item) {
+        var hasBusiness = false;
+        parentData.forEach(function (stackItem) {
+            if (stackItem.businessName === item.businessName) {
+                // stackItem.children = [...stackItem.children, ...item.children]; //手机不支持es6
+                stackItem.children = stackItem.children.concat(item.children);
+                hasBusiness = true;
             }
         })
-    }
+        if (!hasBusiness) {
+            // parentData = [...parentData, item];
+            parentData.push(item);
+        }
+    })  
 }
-
+//坑
 function addDataNew (data) {
     if (stackCloudList.length === 0) {
         stackCloudList = data;
