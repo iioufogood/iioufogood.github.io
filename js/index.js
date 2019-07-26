@@ -17,7 +17,18 @@ function init () {
             activeBusinessName: "",
             activeChildName: "",
             childIndex: 0,
-            expandOnOff: true
+            expandOnOff: true,
+            dropdownOptions: {
+                title: "Tools",
+                list: [
+                    {
+                        label: "文本带格式转换字符串",
+                        className: "",   //dropdown-header
+                        url: "./transform-str.html",
+                        target: "_blank"
+                    }
+                ]
+            }
         }
       },
       mounted: function () {
