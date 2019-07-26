@@ -454,3 +454,9 @@ pre {
     top: 30px;
     right: 30px;
 }
+
+@media screen and (max-width: 700px){
+    .dropdown-content {
+        display: none;
+    }
+}
