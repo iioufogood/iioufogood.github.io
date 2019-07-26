@@ -55,6 +55,35 @@ pre {
     opacity: 0;
 }
 
+.breathe-opacity-anim.startAnim {
+  animation: breatheOpacity 2s infinite ease-in-out;
+}
+@keyframes breathe {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+@keyframes breatheOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /*二级页面*/
 #levelTwoContent {
     background: unset;
@@ -136,7 +165,7 @@ pre {
 }
 
 .level-two-left-content {
-    width: 100%;
+    width: calc(100% - 10px);
     height: 100%;
     padding-left: 10px;
     overflow-y: auto;
@@ -349,4 +378,74 @@ pre {
 
 .swiper-pagination {
     bottom: 80px!important;
+}
+
+.level-two-right .arrow-left {
+    position: absolute;
+    top: calc(50% - 10px);
+    cursor: pointer;
+    left: -60px;
+    width: unset!important;
+    height: unset!important;
+}
+
+.level-two-right .arrow-right {
+    position: absolute;
+    top: calc(50% - 10px);
+    cursor: pointer;
+    width: unset!important;
+    height: unset!important;    
+}
+
+
+.arrow-left {
+    position: relative; 
+}
+.arrow-left:before{
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-right-color: orange;
+    position: absolute;
+    content: "";
+}
+.arrow-left:after{
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-right-color: #121C38;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    content: "";
+}
+
+.arrow-right {
+    position: relative; 
+}
+.arrow-right:after {
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-left-color: #fff;
+    position: absolute;
+    content: "";
+}
+.arrow-right:before {
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-left-color: orange;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    content: "";
+}
+
+.level-two-left.right-all-display {
+    left: -50%!important;
+}
+
+.level-two-right.right-all-display {
+    width: 100%!important;
 }
