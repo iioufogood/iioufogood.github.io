@@ -143,7 +143,7 @@ pre {
     -moz-transition: all 1s;  /* Firefox 4 */
     -webkit-transition: all 1s;   /* Safari 和 Chrome */
     -o-transition: all 1s;     
-    background: #fff;    
+    background: #FFFFCC;    
 }
 
 .level-two-left.recovery {
@@ -252,7 +252,6 @@ pre {
     padding: 1.0rem 1.4rem 1.4rem 0;
     color: #333;
     font-size: 0.9rem;
-    background: #fff;
     overflow: auto;
 }
 
@@ -427,7 +426,7 @@ pre {
     width: 0;
     height: 0;
     border: 25px solid transparent;
-    border-left-color: #fff;
+    border-left-color: #FFFFCC;
     position: absolute;
     content: "";
 }
