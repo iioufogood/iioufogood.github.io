@@ -17,6 +17,7 @@ $(function(){
                         {
                             "name": "配置项",
                             "description": "<div>container：为预留的动画容器；</div><div><br></div><div>renderer：为动画模式，html为纯dom结构动画，canvas为画板动画，svg为svg动画；</div><div><br></div><div>loop：为循环</div><div><br></div><div>autoplay：为自动播放</div><div><br></div><div>animationData：为动画数据，该内容与data.js内容一致，所以data.js 可以不使用；</div><div><br></div><div>path：为动画数据，与animationData不可同时使用，数值为data.json的路径</div><div><br></div><div>常用方法：</div><div><br></div><div>输出动画时长秒：</div><div><br></div><div>console.log(\"时长(s):\" + anim.getDuration(false));</div><div>输出动画时长帧：</div><div><br></div><div>console.log(\"时长(帧):\" + anim.getDuration(true));</div><div>暂停：</div><div><br></div><div>anim.pause();</div><div>播放：</div><div><br></div><div>anim.play();</div><div>停止：</div><div><br></div><div>anim.stop();</div><div>销毁动画实例:</div><div><br></div><div>anim.destroy();</div><div>正/反向播放:</div><div><br></div><div>anim.setDirection(parm);</div><div>parm: 1为正向，-1为反向</div><div><br></div><div>播放速度：</div><div><br></div><div>anim.setSpeed(num);</div>"
+                        }
                     ]
                 },
                 {
