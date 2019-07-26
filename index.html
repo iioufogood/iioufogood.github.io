@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cloud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css?v=fae9d2e" />
 </head>
 
@@ -13,6 +14,20 @@
     <div id="levelTwoContent" class="fadeIn">
         <div class="content-section" v-cloak>
             <div class="level-two-left" :class="{'right-all-display': !expandOnOff}">
+                <div class="dropdown-content">
+                    <div class="dropdown clearfix">
+                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown">
+                        {{dropdownOptions.title}}
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li v-for="item in dropdownOptions.list" :class="item.className">
+                            <a :href="item.url" v-if="item.url" :target="item.target">{{item.label}}</a>
+                            <span v-else>{{item.label}}</span>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
                 <div class="level-two-left-content">
                     <div class="level-two-title">
                         <p>{{levelTwoTile}}</p>
@@ -43,10 +58,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
     <script type="text/javascript" src="./js/index.js?v=4fd217e"></script>
 </body>
