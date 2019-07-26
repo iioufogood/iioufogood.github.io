@@ -11,12 +11,13 @@ function init () {
       el: '#levelTwoContent',
       data: function () {
         return {
-            levelTwoTile: "学无止境",
+            levelTwoTile: "Learning",
             stackCloudList: stackCloudList,
             targetBusiness: {},
             activeBusinessName: "",
             activeChildName: "",
-            childIndex: 0
+            childIndex: 0,
+            expandOnOff: true
         }
       },
       mounted: function () {
@@ -151,9 +152,8 @@ function getScript(win, doc, tag, src, always) {
             }
         });
     }
+
     if (h.parentNode.insertBefore) {
         h.parentNode.insertBefore(script, h);
     };
 }
-
-
