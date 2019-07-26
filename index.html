@@ -12,7 +12,7 @@
 <body class="body" style="overflow: hidden;">
     <div id="levelTwoContent" class="fadeIn">
         <div class="content-section" v-cloak>
-            <div class="level-two-left">
+            <div class="level-two-left" :class="{'right-all-display': !expandOnOff}">
                 <div class="level-two-left-content">
                     <div class="level-two-title">
                         <p>{{levelTwoTile}}</p>
@@ -30,7 +30,9 @@
                     </div>
                 </div>
             </div>
-            <div class="level-two-right">
+            <div class="level-two-right" :class="{'right-all-display': !expandOnOff}">
+                <div class="arrow-left breathe-opacity-anim startAnim" @click="expandOnOff = !expandOnOff" v-if="expandOnOff"></div>
+                <div class="arrow-right breathe-opacity-anim startAnim" @click="expandOnOff = !expandOnOff" v-else></div>
                 <div class="level-two-right-content" v-if="targetBusiness.detailOption">
                     <div class="section" v-for="item in targetBusiness.detailOption">
                         <div class="section-title">
