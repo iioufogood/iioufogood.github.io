@@ -21,6 +21,23 @@ $(function(){
                     ]
                 },
                 {
+                    "name": "实用Express搭建node服务器",
+                    "detailOption": [
+                        {
+                            "name": "安装express中间件",
+                            "description": "npm install express"
+                        },
+                        {
+                            "name": "搭建服务器",
+                            "description": "<div style=\"color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &quot;Courier New&quot;, monospace; line-height: 19px; white-space: pre;\"><div><span style=\"color: #6a9955;\">//引入express中间件</span></div><div><span style=\"color: #569cd6;\">var</span> <span style=\"color: #9cdcfe;\">express</span> = <span style=\"color: #dcdcaa;\">require</span>(<span style=\"color: #ce9178;\">'express'</span>);</div><div><span style=\"color: #569cd6;\">var</span> <span style=\"color: #9cdcfe;\">app</span> = <span style=\"color: #dcdcaa;\">express</span>();</div><br><div><span style=\"color: #6a9955;\">//指定启动服务器到哪个文件夹，我这边指的是dist文件夹</span></div><div><span style=\"color: #9cdcfe;\">app</span>.<span style=\"color: #dcdcaa;\">use</span>(<span style=\"color: #9cdcfe;\">express</span>.<span style=\"color: #dcdcaa;\">static</span>(<span style=\"color: #ce9178;\">'./www'</span>));</div><br><div><span style=\"color: #6a9955;\">//监听端口为3000</span></div><div><span style=\"color: #569cd6;\">var</span> <span style=\"color: #9cdcfe;\">server</span> = <span style=\"color: #9cdcfe;\">app</span>.<span style=\"color: #dcdcaa;\">listen</span>(<span style=\"color: #b5cea8;\">3000</span>, <span style=\"color: #569cd6;\">function</span> () {</div><div>    <span style=\"color: #569cd6;\">var</span> <span style=\"color: #9cdcfe;\">host</span> = <span style=\"color: #9cdcfe;\">server</span>.<span style=\"color: #dcdcaa;\">address</span>().<span style=\"color: #9cdcfe;\">address</span>;</div><div>    <span style=\"color: #569cd6;\">var</span> <span style=\"color: #9cdcfe;\">port</span> = <span style=\"color: #9cdcfe;\">server</span>.<span style=\"color: #dcdcaa;\">address</span>().<span style=\"color: #9cdcfe;\">port</span>;</div><div>    <span style=\"color: #4ec9b0;\">console</span>.<span style=\"color: #dcdcaa;\">log</span>(<span style=\"color: #ce9178;\">'Example app listening at http://localhost:'</span>,<span style=\"color: #9cdcfe;\">port</span>);</div><div>});</div></div>"
+                        },                    
+                        {
+                            "name": "启动服务",
+                            "description": "直接用node **.js"
+                        }
+                    ]
+                },                
+                {
                     "name": "多种类型云资源池",
                     "detailOption": [
                         {
