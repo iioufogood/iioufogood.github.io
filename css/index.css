@@ -7,6 +7,7 @@ html, body, p {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-size: unset;
 }
 
 li {
@@ -128,8 +129,7 @@ pre {
     transition: all 1s;
     -moz-transition: all 1s;  /* Firefox 4 */
     -webkit-transition: all 1s;   /* Safari 和 Chrome */
-    -o-transition: all 1s;     
-    background: green;
+    -o-transition: all 1s;
 }
 
 #levelTwoContent .level-two-right {
@@ -447,4 +447,10 @@ pre {
 
 .level-two-right.right-all-display {
     width: 100%!important;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
