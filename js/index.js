@@ -1,6 +1,6 @@
 var baseUrl = "./data/data";
 var markNum = 1;
-var maxNum = 2;
+var maxNum = 3;
 var stackCloudList = [];
 var vueApp = null;
 //初始化 queryJson方法是启用
