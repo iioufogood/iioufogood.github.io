@@ -25,7 +25,7 @@
     <div class="container">
         <br>
         <br>
-        <div class="row text-center"><h2>文本带格式转换成字符串</h2></div>
+        <div class="row text-center"><h2>文本带格式转换成字符串<small>支持粘贴拖拽图片</small></h2></div>
         <div class="row">
             <div class="col-md-12" contenteditable="true" id="inputContent" placeholder="请输入或者粘贴文本" style="background: #CCCCCC; min-height: 200px; max-height: 400px; overflow: auto;"></div>
         </div>
@@ -39,12 +39,18 @@
         </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/transform.js"></script>
     <script type="text/javascript">
         function transformFn () {
             if ($("#inputContent").html()) {
                 $("#textareaContent").val(JSON.stringify($("#inputContent").html()));           
             }
         }
+        $(function () {
+            $("#inputContent").pasteUploadImage("./test", function ($this, file, imgData) {
+                //do something
+            })
+        })
     </script>
 </body>
 
