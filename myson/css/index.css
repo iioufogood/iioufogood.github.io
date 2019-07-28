@@ -1,0 +1,43 @@
+
+    *{
+    	padding: 0;
+    	margin: 0;
+	}
+	html {
+		height: 100%;
+	}
+    body {
+    	background-color: #000;
+		overflow: hidden;
+		height: 100%;
+    }
+    .carousel {
+    	height: 100%;
+    	margin: 30px auto;
+    	position: relative;
+    	transform-style: preserve-3d;  /*实现3D效果*/
+    	perspective: 800px;  /*视线的距离*/
+    }
+
+    /*图片展示的位置以及运动的时间*/
+    .carousel img {
+    	position: absolute;
+    	display: block;
+    	width: 50%;
+    	height: 70%;
+    	/*	transform:rotateY(-45deg);*/
+    	-webkit-box-reflect: below 0 -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,0.5));
+    	transition: 0.6s;
+    }
+    /*图片左边部分*/
+    .carousel img.left {
+    	transform: rotateY(45deg) translateZ(-100px);
+    }
+      /*中间图片部分*/
+    .carousel img.current{
+    	transform: translateZ(100px);
+    }
+      /*图片右边部分*/
+    .carousel img.right {
+    	transform: rotateY(-45deg)  translateZ(-100px);
+    }
