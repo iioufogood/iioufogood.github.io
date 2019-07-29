@@ -12,14 +12,17 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="app">
         <div class="row">
             <div class="col-md-12">
-                <div id="app" v-cloak>
+                <div v-cloak>
                     {{name}}
                     <cmp></cmp>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <router-view></router-view>
         </div>
     </div>
 </body>

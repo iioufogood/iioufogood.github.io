@@ -16,10 +16,17 @@ require.config({
     }
     }
 });
-require(['vue','src/component/component','ELEMENT',], function (Vue, cmp, ELEMENT) {
+require(['vue','src/component/component','ELEMENT', 'vue-router', 'src/routes/routes'], function (Vue, cmp, ELEMENT, VueRouter, routes) {
     //从testTwo中导出的方法
     // hello();
     Vue.use(ELEMENT);
+    Vue.use(VueRouter);
+
+    const router = new VueRouter({
+        routes,
+        // mode: "history"
+    })
+
     new Vue({
     el: "#app",
     data() {
@@ -38,6 +45,7 @@ require(['vue','src/component/component','ELEMENT',], function (Vue, cmp, ELEMEN
     },
     components:{
         cmp
-    }
+    },
+    router
     })
 });    
