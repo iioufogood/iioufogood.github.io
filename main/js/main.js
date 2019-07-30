@@ -35,7 +35,7 @@ require(['vue','src/component/component','ELEMENT', 'vue-router', 'src/routes/ro
         }
     },
     created(){
-        this.$message("hello");
+        this.$message("欢迎来到iioutogood的页面！");
         console.log(this.getName());
     },
     methods:{
