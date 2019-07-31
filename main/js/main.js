@@ -4,7 +4,8 @@ require.config({
     paths:{
     //由于element-ui 内部写的 define("ELEMENT",["vue"],xxx)
     //所以它的别名必须叫ELEMENT 也必须有一个叫vue的依赖才能加载
-    "ELEMENT":"https://unpkg.com/element-ui@2.0.9/lib/index",
+    // "ELEMENT":"https://unpkg.com/element-ui@2.0.9/lib/index",
+    "ELEMENT":"element-ui/index",
     "src": "../src"
     },
     shim:{
@@ -40,7 +41,7 @@ require(['vue','src/component/component','ELEMENT', 'vue-router', 'src/routes/ro
     },
     methods:{
         getName(){
-        return "test"
+        return "hello"
         }
     },
     components:{

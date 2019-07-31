@@ -1,4 +1,4 @@
-define(['src/views/login', 'src/views/home', 'src/views/home/transformstr'], function (login, home, transformstr) {
+define(['src/views/login', 'src/views/home/home', 'src/views/home/transformstr'], function (login, home, transformstr) {
 	return [
 		{
 		    path: '/login',

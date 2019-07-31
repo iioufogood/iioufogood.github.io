@@ -1,5 +1,4 @@
 define(['vue', 'src/service/service'], function (Vue, service) {
-	console.log(service)
     return Vue.component('cmp', {
         template: 
 	        `<el-container>
