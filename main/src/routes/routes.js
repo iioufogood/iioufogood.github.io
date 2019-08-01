@@ -19,7 +19,14 @@ define(['src/views/login', 'src/views/home/home', 'src/views/home/transformstr']
 		    		path: '/home/transformstr',
 		    		name: 'transformstr',
 		    		component: transformstr
-		    	}
+				},
+		    	{
+		    		path: '/home/element-ui',
+		    		name: 'element-ui',
+		    		component: {
+						template: '<iframe src="../element-ui/index.html" style="width: 100%; height: 100%"></iframe></div>'
+					}
+		    	}				
 		    ]
 		 } 		 
 	]
