@@ -65,7 +65,11 @@ define(['vue', 'src/service/service'], function (Vue, service) {
                 	{
                 		label: "文本带格式转换成字符串",
                 		path: "/home/transformstr"
-                	}
+									},
+                	{
+                		label: "element-ui文档",
+                		path: "/home/element-ui"
+									}									
                 ]
             }
         },
