@@ -1,7 +1,7 @@
 define([], function () {
 	var baseUrl = "./assets/data/data";
 	var markNum = 1;
-	var maxNum = 3;
+	var maxNum = 4;
 	function getData (callback) {
 	    getScript(window, document, "script", baseUrl + markNum + ".js", function (target) {
 	        $(document).find(target.target).remove();
